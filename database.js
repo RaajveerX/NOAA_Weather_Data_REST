@@ -74,7 +74,7 @@ async function loadData() {
 
         // reading line by line
         const rl = readline.createInterface({
-            input: fs.createReadStream('2024.csv')
+            input: fs.createReadStream('/data/2024.csv')
         });
 
         for await (const line of rl) {
