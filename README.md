@@ -63,8 +63,7 @@ http://localhost:1300/station/AEM00041217
 - Since the user only has to enter the station_id and retrieve relevant data, I went ahead with Vanilla JS and later introduced Tailwind CSS to make things look nice (React seemed unnecessary)
 - served it using nginx since I have used it before to serve static files in an easy and efficient way
 
-## Docker Design
-
+![NBMetadataCache](https://github.com/user-attachments/assets/c816e763-18e3-493e-a8ba-bf9546f27c2d)
 
 
 
