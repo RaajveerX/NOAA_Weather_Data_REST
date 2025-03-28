@@ -43,3 +43,10 @@ http://localhost:1300/station/invalid_id
 http://localhost:1300/station/AEM00041217
 ```
 # System Design
+
+## Tech Stack
+- Backend: Node.js + Express.js
+- Database: PostgreSQL
+- Front-end: Vanilla JS + Tailwind CSS
+
+- 
