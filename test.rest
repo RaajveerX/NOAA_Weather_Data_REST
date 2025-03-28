@@ -9,5 +9,3 @@ GET http://localhost:1300/station/AEM00041217
 
 ### should return 404 invalid station id
 GET http://localhost:1300/station/invalid_id
-
-###
