@@ -4,7 +4,7 @@
 
 - Docker, Docker Compose, Git
 
-## Quick Start
+## Quick Start (Startup Time = ~5 min due to downloading the .csv file from source, loading data into postgres)
 
 1. Clone the repository
 ```bash
@@ -40,3 +40,4 @@ http://localhost:1300/station/invalid_id
 ```bash
 http://localhost:1300/station/AEM00041217
 ```
+# System Design
