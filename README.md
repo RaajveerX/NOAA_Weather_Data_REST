@@ -49,4 +49,22 @@ http://localhost:1300/station/AEM00041217
 - Database: PostgreSQL
 - Front-end: Vanilla JS + Tailwind CSS
 
-- 
+## Data Loading
+- The dockerfile is configured to download the csv file from the NOAA url and then unzip it. This takes up a bit of time to load given speed of the internet connection
+- Considering the CSV file size, I wanted a good middle ground between storing data efficiently and fast queries. After going through options like a Map, DynamoDB, and MongoDB, I landed on PostgreSQL
+- To prevent heap memory overload, I process the CSV file in chunks of 1 million lines and then stream it to the PostgreSQL database using COPY instead of INSERTS
+- There is a small memory tradeoff here that is introduced since the chunks are stored and then processed using Node.js streams
+
+## Optimizing the queries
+- After loading the data, I create an index in the PostgreSQL database with the station_id as the primary key
+- This allows queries in O(LogN) time
+
+## Frontend
+- Since the user only has to enter the station_id and retrieve relevant data, I went ahead with Vanilla JS and later introduced Tailwind CSS to make things look nice (React seemed unnecessary)
+- served it using nginx since I have used it before to serve static files in an easy and efficient way
+
+## Docker Design
+
+
+
+
