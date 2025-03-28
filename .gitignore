@@ -16,5 +16,3 @@ build/
 Thumbs.db
 
 *.csv
-
-frontend/output.css
