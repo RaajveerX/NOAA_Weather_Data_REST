@@ -4,7 +4,9 @@
 
 - Docker, Docker Compose, Git
 
-## Quick Start (Startup Time = ~5 min due to downloading the .csv file from source, loading data into postgres)
+## Quick Start
+
+Startup Time = ~5 min due to downloading the .csv file from source, loading data into postgres
 
 1. Clone the repository
 ```bash
