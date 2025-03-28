@@ -1,0 +1,13 @@
+### server check
+GET http://localhost:1300/
+
+### Get station data, should return 200 and array of stations
+GET http://localhost:1300/station/AE000041196
+
+### Get station data, should return 200 and array of stations
+GET http://localhost:1300/station/AEM00041217
+
+### should return 404 invalid station id
+GET http://localhost:1300/station/invalid_id
+
+###

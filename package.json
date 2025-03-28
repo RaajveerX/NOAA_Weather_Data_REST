@@ -1,0 +1,24 @@
+{
+  "name": "march-27-energybot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.14.1",
+    "pg-copy-streams": "^6.0.6",
+    "tailwindcss": "^4.0.17"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21"
+  }
+}

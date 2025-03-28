@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  noaa:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: noaa_database
+    volumes:
+      - ./2024.csv:/data/2024.csv # csv file
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+# app starts after database is healthy, can't query data without it
+  app:
+    build: .
+    ports: 
+      - 1300:3000
+    depends_on:
+      noaa:
+        condition: service_healthy
+        
+# frontend is dependent on app
+  frontend:
+    image: nginx
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    ports:
+      - 8080:80
+    depends_on:
+      - app

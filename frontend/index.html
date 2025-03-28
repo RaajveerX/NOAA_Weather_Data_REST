@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOAA Weather Records</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body class="h-full bg-gray-100 p-8">
+    <div class="h-full w-3/4 mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">NOAA Weather Records</h1>
+        <div class="flex flex-col bg-white p-6 rounded-lg shadow-md">
+            <div class="flex flex-wrap items-center gap-4 mb-6 justify-evenly">
+                <label for="query_id" class="flex text-gray-700 font-medium">Enter Station ID:</label>
+                <input type="text" id="query_id" class="flex-grow border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button onclick="fetchStations()" class="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600 transition-colors">Search</button>
+            </div>
+            <div id="result" class="flex-col mt-4"></div>
+        </div>
+    </div>
+</body>
+</html>
