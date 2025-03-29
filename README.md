@@ -21,16 +21,16 @@ docker-compose up --build
 - API: The backend API is available at `http://localhost:1300/station/<station_id>`
 
 ## Project Structure
-- `./frontend`: Contains the web interface files
+- `./frontend`: Contains the front-end files
 - `server.js`: Main Express server file
 - `database.js`: Database connection and data loading
 - `docker-compose.yaml`: Docker configuration for the three services, frontend, backend, and database
-- `Dockerfile`: Docker configuration for the Node.js application
+- `Dockerfile`: Dockerfile to set up dependencies, env, etc
 
 ## API Endpoints
 
 - `GET /`: For checking server health
-- `GET /station/station_id`: Get weather records for a specific station
+- `GET /station/<station_id>`: Get weather records for a specific station
 
 ## Example Test Endpoints
 ```bash
