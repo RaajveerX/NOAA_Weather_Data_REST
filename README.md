@@ -55,7 +55,7 @@ http://localhost:1300/station/AEM00041217
 - To avoid running into memory issues and prevent heap memory overload, I process the CSV file in chunks of 1 million lines and stream it into PostgreSQL using COPY instead of INSERT statements
 - There’s a small memory tradeoff since the chunks are stored briefly before being processed using Node.js streams
 
-## Optimizing the queries
+## Optimizing The Queries
 - After loading the data, I create an index on the station_id column in PostgreSQL, sorting the records in descending order of date
 - This allows queries in O(LogN) time
 
